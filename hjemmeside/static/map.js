@@ -28,6 +28,29 @@ fetch('/api/shops')
 
   });*/
 
+
+fetch('/api/locations')
+  .then(res => res.json())
+  .then(stores => {
+
+    stores.forEach(store => {
+
+      new maplibregl.Marker()
+        .setLngLat([store.location/lng, store.location/lat])
+        .setPopup(
+          new maplibregl.Popup({ offset: 25 })
+            .setHTML(`
+              <h3>${store.title}</h3>
+              <p>Rating: ${store.totalScore}</p>
+              <p>Kategori: ${store.categoryName}</p>
+            `)
+        )
+        .addTo(map);
+
+    });
+
+  });
+
 // HVOR ER DU FUNKTION
 function getLocation() {
   if (navigator.geolocation) {

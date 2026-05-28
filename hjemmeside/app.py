@@ -21,13 +21,13 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
     
 @app.route('/api/locations', methods=['GET'])
 def get_locations():
     
-    url = f"{SUPABASE_URL}https://ncvjlkdoieuqtgsyeyrj.supabase.co"
+    url = f"{SUPABASE_URL}/rest/v1/locations"
     response = requests.get(url, headers=SUPABASE_HEADERS)
     return jsonify(response.json())
 
+if __name__ == '__main__':
+    app.run(debug=True)
