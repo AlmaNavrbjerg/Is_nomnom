@@ -23,3 +23,11 @@ def home():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+@app.route('/api/locations', methods=['GET'])
+def get_locations():
+    
+    url = f"{SUPABASE_URL}https://ncvjlkdoieuqtgsyeyrj.supabase.co"
+    response = requests.get(url, headers=SUPABASE_HEADERS)
+    return jsonify(response.json())
+
