@@ -3,3 +3,4 @@ requests==2.33.1
 ijson==3.5.0
 osmnx==2.1.0
 python-dotenv
+supabase
