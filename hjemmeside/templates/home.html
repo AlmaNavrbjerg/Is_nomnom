@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block extra_head %}
+
+<script src="/static/home.js"></script>
+
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for a place..."/>
+        <button onclick="searchForIs()">Search</button>
+        <button onclick="useMyLocation()">Use my location</button>
+    </div>
+    <div id="map" class="map"></div>
+    <script src="/static/map.js"></script>
+</main>
+
+
+{% endblock %}
