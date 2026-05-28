@@ -11,7 +11,7 @@ let marker = new maplibregl.Marker()
     .setText('This is TIVOLI!')) // set the text for the popup
   .addTo(map); // add the marker to the map
 
-/* Fetch the shops from the API and add them to the map as markers with popups. 
+/*
 fetch('/api/shops')
   .then(response => response.json())
   .then(shops => {
