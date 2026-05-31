@@ -11,25 +11,8 @@ let marker = new maplibregl.Marker()
     .setText('This is TIVOLI!')) // set the text for the popup
   .addTo(map); // add the marker to the map
 
-/*
-fetch('/api/shops')
-  .then(response => response.json())
-  .then(shops => {
 
-    shops.forEach(shop => {
-      new maplibregl.Marker()
-        .setLngLat([shop.lng, shop.lat])
-        .setPopup(
-          new maplibregl.Popup({ offset: 25 })
-            .setText(shop.name)
-        )
-        .addTo(map);
-    });
-
-  });*/
-
-
-fetch('/api/locations')
+fetch('/api/locations') //den der arbedjdes på, burde være rigtig når DB er blevet opdateret
   .then(res => res.json())
   .then(shops => {
 

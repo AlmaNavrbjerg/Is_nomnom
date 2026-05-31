@@ -1,7 +1,62 @@
-/* map fills remaining space */
+/* Gør hele siden til fuld højde */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Top bar (overskrift + søgning) */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 16px 12px;
+    background: white;
+    z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.top-bar h1 {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+/* Search bar layout */
+.search-bar {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 8px;
+}
+
+/* Kortet fylder resten af skærmen */
+.map-container {
+    height: 100%;
+}
+
+.map {
+    height: 90vh;
+    width: 95%;
+    margin: 0 auto;
+    background: #e9e9e9;
+}
+
+/*
+map fills remaining space 
 .map {
   width: 97.5%;
   height: 500px;
   margin: 0 auto;
   background: #e9e9e9;
 }
+*/

@@ -10,15 +10,19 @@
 
 {% block content %}
 
-<main>
+<header class="top-bar">
+    <h1>Find steder i nærheden</h1>
+
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search for a place..."/>
         <button onclick="searchForIs()">Search</button>
         <button onclick="useMyLocation()">Use my location</button>
     </div>
+</header>
+
+<main class="map-container">
     <div id="map" class="map"></div>
     <script src="/static/map.js"></script>
 </main>
-
 
 {% endblock %}
