@@ -31,18 +31,18 @@ fetch('/api/shops')
 
 fetch('/api/locations')
   .then(res => res.json())
-  .then(stores => {
+  .then(shops => {
 
-    stores.forEach(store => {
+    shops.forEach(shops => {
 
       new maplibregl.Marker()
-        .setLngLat([store.location/lng, store.location/lat])
+        .setLngLat([shops.longitude, shops.latitude])
         .setPopup(
           new maplibregl.Popup({ offset: 25 })
             .setHTML(`
-              <h3>${store.title}</h3>
-              <p>Rating: ${store.totalScore}</p>
-              <p>Kategori: ${store.categoryName}</p>
+              <h3>${shops.title}</h3>
+              <p>Rating: ${shops.totalScore}</p>
+              <p>Kategori: ${shops.categoryName}</p>
             `)
         )
         .addTo(map);
