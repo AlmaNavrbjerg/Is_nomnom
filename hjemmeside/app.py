@@ -29,7 +29,7 @@ def get_conn():
 @app.route('/api/locations', methods=['GET'])
 def get_locations():
     
-    url = f"{SUPABASE_URL}/rest/v1/locations"
+    url = f"{SUPABASE_URL}/rest/v1/shops"
     response = requests.get(url, headers=SUPABASE_HEADERS)
     return jsonify(response.json())
 

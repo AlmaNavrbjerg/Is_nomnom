@@ -25,7 +25,7 @@ fetch('/api/locations') //den der arbedjdes på, burde være rigtig når DB er b
             .setHTML(`
               <h3>${shops.title}</h3>
               <p>Rating: ${shops.totalScore}</p>
-              <p>Kategori: ${shops.categoryName}</p>
+              <p> ${shops.website}</p>
             `)
         )
         .addTo(map);
