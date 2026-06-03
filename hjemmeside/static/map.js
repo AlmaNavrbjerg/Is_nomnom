@@ -12,7 +12,7 @@ let marker = new maplibregl.Marker()
   .addTo(map); // add the marker to the map
 
 
-fetch('/api/locations') //den der arbedjdes på, burde være rigtig når DB er blevet opdateret
+fetch('/api/locations') 
   .then(res => res.json())
   .then(shops => {
 
@@ -65,3 +65,5 @@ function showPosition(position) {
 }
 
 getLocation();
+
+//Søge funktion m regex
