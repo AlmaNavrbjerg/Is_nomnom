@@ -109,7 +109,10 @@ Is_nomnom/
 
 This is a school project by:
 
-- [AlmaNavrbjerg](https://github.com/AlmaNavrbjerg) and team
+- [AlmaNavrbjerg](https://github.com/AlmaNavrbjerg)
+- [Emma-MariaMarup]
+- [MaiaRamboKristensen]
+- [CecilieLovhøj]
 
 Pull requests are welcome for bug fixes and improvements.
 
