@@ -112,7 +112,7 @@ This is a school project by:
 - [Alma Navrbjerg](https://github.com/AlmaNavrbjerg)
 - Emma-MariaMarup 
 - Maia Rambo Kristensen
-- Cecilie Lovhøj
+- Cecilie Løvhøj
 
 Pull requests are welcome for bug fixes and improvements.
 
