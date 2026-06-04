@@ -2,6 +2,13 @@
 
 **Is_nomnom** is a web app for discovering local ice cream shops — browse their flavours, check opening hours, and leave reviews, all in one place.
 
+## Description
+The purpose of our project is to build a web application featuring an interactive map of ice cream shops in Denmark. The website will display information about different ice cream stores, including their location, city, store name, email address, phone number, and rating on a scale from 1 to 5 stars.
+
+Users of the website will be able to interact with the map by clicking on different markers representing the ice cream shops. When selecting a marker, detailed information about the specific store will be displayed.
+
+The project focuses on database interaction, interactive map visualization, and user-friendly navigation 
+
 ---
 
 ## Features
