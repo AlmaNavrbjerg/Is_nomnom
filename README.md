@@ -9,8 +9,11 @@ Users of the website will be able to interact with the map by clicking on differ
 
 The project focuses on database interaction, interactive map visualization, and user-friendly navigation 
 
----
 
+
+
+
+---
 ## Features
 
 - Browse ice cream shops near you on an interactive map
@@ -45,7 +48,10 @@ The app uses eight tables in Supabase (PostgreSQL):
 See [`/supabase`](./supabase) for the SQL migration files.
 
 ---
+## E/R model
 
+<img width="202" height="329" alt="image" src="https://github.com/user-attachments/assets/bd82e903-b095-480e-80fd-9a32431a4042" />
+---
 ## Getting Started
 
 ### Prerequisites
