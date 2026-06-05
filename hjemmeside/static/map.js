@@ -159,5 +159,3 @@ function searchPlaces(data, query) {
         place.city?.toLowerCase().includes(q)
     );
 }
-
-//Søge funktion m regex

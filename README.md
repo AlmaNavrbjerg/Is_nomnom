@@ -9,7 +9,7 @@ Users of the website will be able to interact with the map by clicking on differ
 
 The project focuses on database interaction, interactive map visualization, and user-friendly navigation 
 
-
+The user has to zoom out to see ice cream shops, since the database only has shops in some areas. We chose that this is okay since the functionallity would be the same if we had more shops.
 
 
 
