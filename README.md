@@ -53,6 +53,8 @@ See [`/supabase`](./supabase) for the SQL migration files.
 
 <img width="202" height="329" alt="image" src="https://github.com/user-attachments/assets/bd82e903-b095-480e-80fd-9a32431a4042" />
 
+Our E/R model has three main entities: Shop, User, and Review. A shop can receive many reviews, and each review belongs to exactly one shop. A user can write many reviews, and each review is written by exactly one user. The Review entity stores information such as the rating score and review ID.
+
 ---
 ## Getting Started
 
