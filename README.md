@@ -1,11 +1,11 @@
 # Is_nomnom
 
-**Is_nomnom** is a web app for discovering local ice cream shops — browse their flavours, check opening hours, and leave reviews, all in one place.
+**Is_nomnom** is a web app for discovering local ice cream shops.
 
 ## Description
-The purpose of our project is to build a web application featuring an interactive map of ice cream shops in Denmark. The website will display information about different ice cream stores, including their location, city, store name, email address, phone number, and rating on a scale from 1 to 5 stars.
+The purpose of our project is to build a web application featuring an interactive map of ice cream shops in Denmark. The website will display information about different ice cream stores, including their location, city, store name, website, phone number, and rating on a scale from 1 to 5 stars.
 
-Users of the website will be able to interact with the map by clicking on different markers representing the ice cream shops. When selecting a marker, detailed information about the specific store will be displayed.
+Users of the website will be able to interact with the map by clicking on different markers representing the ice cream shops. When selecting a marker, detailed information about the specific store will be displayed. As well as search for specific key words.
 
 The project focuses on database interaction, interactive map visualization, and user-friendly navigation 
 
@@ -14,10 +14,9 @@ The project focuses on database interaction, interactive map visualization, and 
 ## Features
 
 - Browse ice cream shops near you on an interactive map
-- See each shop's current flavours and availability
-- Check opening hours for any day of the week
-- Read and write reviews for your favourite shops
-- Search and filter by flavour, location, or rating
+- Check contact options
+- See rewiev score for your favourite shops
+- Search and filter by name, location, or rating
 
 ---
 
@@ -33,13 +32,15 @@ The project focuses on database interaction, interactive map visualization, and 
 
 ## Database Schema
 
-The app uses five tables in Supabase (PostgreSQL):
+The app uses eight tables in Supabase (PostgreSQL):
 
-- **`shops`** — ice cream shop details (name, address, location, contact)
-- **`flavours`** — flavours linked to each shop, with availability status
-- **`opening_hours`** — per-day opening times for each shop
-- **`users`** — registered users (handled via Supabase Auth)
-- **`reviews`** — user ratings and comments for shops
+- **`title`** — ice cream shop name 
+- **`totalScore`** — A score from 1-5 of how good the shop is
+- **`longitude/latitude`** — the precise location of the shop
+- **`city`** — the city where the shop is located
+- **`website`** — the shops website URL
+- **`phone`** — the shops telefone number
+- **`categoryName`** — the category in which the shop belongs
 
 See [`/supabase`](./supabase) for the SQL migration files.
 
@@ -82,17 +83,9 @@ SUPABASE_KEY=your-anon-key
 
 ---
 
-## Input Validation (Regex)
+## Regex and search function
 
-The app uses regular expressions to validate user input before it reaches the database. See [`/hjemmeside/validation.js`](./hjemmeside/validation.js) for the full implementation.
-
-| Field | Pattern | Example |
-|---|---|---|
-| Email | `^[^\s@]+@[^\s@]+\.[^\s@]+$` | `alma@example.com` |
-| Phone (DK) | `^(\+45)?[\s-]?[2-9]\d{7}$` | `+45 23 45 67 89` |
-| Opening time | `^([01]\d\|2[0-3]):[0-5]\d$` | `09:30` |
-| Rating | `^[1-5]$` | `4` |
-| Website URL | `^https?:\/\/([\w-]+\.)+[\w-]+(\/[\w\-./?%&=]*)?$` | `https://sweetshop.dk` |
+The application uses regular expressions to process search input. Regular expressions are used to safely handle special characters entered by the user and to identify numeric input, such as ratings, so that rating-based searches can be performed correctly.
 
 ---
 
@@ -101,10 +94,14 @@ The app uses regular expressions to validate user input before it reaches the da
 ```
 Is_nomnom/
 ├── hjemmeside/          # Frontend (HTML, CSS, JS)
-│   ├── index.html
-│   ├── app.js
-│   ├── validation.js    # Regex input validation
-│   └── style.css
+│   ├── static/
+│   │   ├── home.js
+│   │   ├── map.js       # Marker, location and search funktion 
+│   │   └── style.css  
+│   ├── templates/
+│   │   ├── base.html
+│   │   └── home.html  
+│   └── app.py
 ├── supabase/            # Database migrations and schema
 ├── requirements.txt     # Python dependencies
 └── README.md
@@ -124,7 +121,10 @@ This is a school project by:
 Pull requests are welcome for bug fixes and improvements.
 
 ---
+## AI declaration
+In this project there ave been some use of AI, it has mostly been used when an error occured, like a function working but the result not showing on the map.
 
+---
 ## License
 
 [MIT](./LICENSE)

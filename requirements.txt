@@ -4,4 +4,4 @@ ijson==3.5.0
 osmnx==2.1.0
 python-dotenv
 psycopg[binary]
-validation==0.1.0
+
