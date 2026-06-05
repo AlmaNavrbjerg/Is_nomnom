@@ -51,9 +51,9 @@ See [`/supabase`](./supabase) for the SQL migration files.
 
 ## E/R model
 
-<img width="197" height="324" alt="image" src="https://github.com/user-attachments/assets/e1c65374-0086-4a19-bd17-7d263140570b" />
+<img width="343" height="344" alt="image" src="https://github.com/user-attachments/assets/859797bd-954f-44af-89e3-c193a68391e6" />
 
-Our E/R model has three main entities: Shop, User, and Rating. A shop can receive many ratings, and each rating belongs to exactly one shop. A user can give many rating, and each rating is given by exactly one user. The Rating entity stores information such as the rating score and rating ID.
+Our E/R model consists of two main entities: Shop and User. The User entity represents the users of the application and stores information about their location. The Shop entity stores information about ice cream shops, including their name, website, coordinates, city, and rating. The relationship between the entities shows that a user can view shops on the map based on their location.
 
 ---
 ## Getting Started
