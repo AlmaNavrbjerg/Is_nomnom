@@ -46,6 +46,7 @@ The app uses eight tables in Supabase (PostgreSQL):
 - **`categoryName`** — the category in which the shop belongs
 
 See [`/supabase`](./supabase) for the SQL migration files.
+See database.csv for the full database.
 
 ---
 
